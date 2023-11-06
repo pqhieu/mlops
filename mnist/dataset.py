@@ -28,6 +28,6 @@ artifact.add(train_samples, "train_samples")
 val_samples = wandb.Table(columns=["image", "label", "split"])
 for image, label in val_dataset:
     val_samples.add_data(wandb.Image(image), label, "val")
-artifact.add(train_samples, "val_samples")
+artifact.add(val_samples, "val_samples")
 
 run.log_artifact(artifact)
